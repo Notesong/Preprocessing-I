@@ -54,8 +54,220 @@ table {
 }
 
 html, body {
-	height: 100%;
+	font-size: 62.5%;
+	font-family: @stylishBasicFont;
 }
 
 
+// Variables
+@mobileWidth: 500px;
+@tabletWidth: 1100px;
 
+@asideBGColor: rgb(188, 238, 255);
+@headerBGColor: rgb(58, 58, 58);
+@headerFontColor: wheat;
+@mainPanelBGColor: rgb(231, 211, 175);
+@contactBGColor: rgb(202, 192, 131);
+@initialsBGColor: rgb(231, 192, 119);
+
+@railwayFont: 'Raleway', sans-serif;
+@basicFont: Arial, Helvetica, sans-serif;
+@stylishBasicFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+// Mixins
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+.flexWrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+.tabletColumn {
+	@media only screen and (max-width: @tabletWidth) {
+		flex-direction: column;
+	}
+}
+
+
+#container {
+
+	.flexColumn();
+	padding: 2rem;
+	width: 100%;
+
+	@media only screen and (max-width: @mobileWidth) {
+		padding: 0;
+	}
+	p, li {
+		font-size: 1.6rem;
+	}
+	p {
+		padding: 0 0 2rem 0;
+	}
+	li {
+		padding: 2rem 0;
+		width: 65%;
+		border-bottom: 0.1rem solid black;
+		text-align: center;
+	}
+	li:last-child {
+		border: none;
+	}
+	h1, h2 {
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	h1 {
+		font-size: 5rem;
+		letter-spacing: 1rem;
+		font-family: @railwayFont;
+		@media only screen and (max-width: @mobileWidth) {
+			font-size: 3rem;
+		}
+	}	
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+	h4 {
+		font-size: 1.7rem;
+	}
+
+	#mainHeader {
+		background: @headerBGColor;
+		color: @headerFontColor;
+		padding: 4rem 0 2rem 0;
+	}
+
+	#mainContent {
+
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		@media only screen and (max-width: @mobileWidth) {
+			flex-direction: column;
+		}
+
+		#asidePanel {
+			padding: 2rem;
+		}
+
+		#asidePanel {
+			background: @asideBGColor;
+
+			#asideHeader {
+				.flexColumn();
+				align-items: center;
+			}			
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+				padding: 2rem;
+				border-radius: 50%;
+				margin-bottom: 2rem;
+			}
+			#education {
+				p {
+					font-style: italic;
+				}
+			}
+			#techSkills ul {
+				.flexColumn;
+				align-items: center;
+				margin: 5rem 0;
+			}
+			hr {
+				width: 15%;
+				height: 0.7rem;
+				text-align: center;
+				background: black;
+				border-radius: 10px;
+				margin-bottom: 2rem;
+			}
+			h2 {
+				margin-top: 2rem;
+			}
+		} // end asidePanel
+
+
+		#mainPanel {
+			.flexColumn();
+			justify-content: space-between;
+			background: @mainPanelBGColor;
+			
+			main {
+				padding: 4em;
+			}
+
+			#workHeader {
+				margin-top: 4rem;
+			}
+
+			.workSection {
+				padding: 4rem;
+				@media only screen and (max-width: @tabletWidth) {
+					padding: 1rem;
+				}
+				h4 {
+					font-style: italic;
+				}
+				p {
+					font-family: @basicFont;
+					font-size: 1.6rem;
+					padding-top: 2rem;
+				}
+			}
+
+			footer {
+				display: flex;
+				padding: 0;
+				width: 100%;
+				margin: 0;
+				.tabletColumn();
+
+				#contact, #initials {
+					.flexColumn();
+					width: 50%;
+					height: 100%;
+					padding: 4rem 2rem;
+					@media only screen and (max-width: @tabletWidth) {
+						width: 100%;
+					}
+				}
+				#contact .contactInfo {
+					.flexWrap();
+					justify-content: space-between;
+					.tabletColumn();
+				}
+				.contactInfo p {
+					text-align: center;
+				}
+				#contact {
+					background: @contactBGColor;
+					// min-width: 30rem;
+					
+				}
+				#initials {
+					background: @initialsBGColor;
+					justify-content: center;
+					font-family: @railwayFont;
+				}
+				#initials h2 {
+					font-size: 10rem;
+					@media only screen and (max-width: @mobileWidth) {
+						font-size: 6rem;
+					}
+				}
+			}
+
+		} // end mainPanel
+
+	} // end mainContent
+
+} // end container

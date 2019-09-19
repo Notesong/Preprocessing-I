@@ -132,5 +132,207 @@ table {
 }
 html,
 body {
+  font-size: 62.5%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1100px) {
+  .tabletColumn {
+    flex-direction: column;
+  }
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  #container {
+    padding: 0;
+  }
+}
+#container p,
+#container li {
+  font-size: 1.6rem;
+}
+#container p {
+  padding: 0 0 2rem 0;
+}
+#container li {
+  padding: 2rem 0;
+  width: 65%;
+  border-bottom: 0.1rem solid black;
+  text-align: center;
+}
+#container li:last-child {
+  border: none;
+}
+#container h1,
+#container h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+#container h1 {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  #container h1 {
+    font-size: 3rem;
+  }
+}
+#container h2 {
+  font-size: 2rem;
+}
+#container h3 {
+  font-size: 1.8rem;
+}
+#container h4 {
+  font-size: 1.7rem;
+}
+#container #mainHeader {
+  background: #3a3a3a;
+  color: wheat;
+  padding: 4rem 0 2rem 0;
+}
+#container #mainContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  #container #mainContent {
+    flex-direction: column;
+  }
+}
+#container #mainContent #asidePanel {
+  padding: 2rem;
+}
+#container #mainContent #asidePanel {
+  background: #bceeff;
+}
+#container #mainContent #asidePanel #asideHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container #mainContent #asidePanel img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 2rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+#container #mainContent #asidePanel #education p {
+  font-style: italic;
+}
+#container #mainContent #asidePanel #techSkills ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+}
+#container #mainContent #asidePanel hr {
+  width: 15%;
+  height: 0.7rem;
+  text-align: center;
+  background: black;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+#container #mainContent #asidePanel h2 {
+  margin-top: 2rem;
+}
+#container #mainContent #mainPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #e7d3af;
+}
+#container #mainContent #mainPanel main {
+  padding: 4em;
+}
+#container #mainContent #mainPanel #workHeader {
+  margin-top: 4rem;
+}
+#container #mainContent #mainPanel .workSection {
+  padding: 4rem;
+}
+@media only screen and (max-width: 1100px) {
+  #container #mainContent #mainPanel .workSection {
+    padding: 1rem;
+  }
+}
+#container #mainContent #mainPanel .workSection h4 {
+  font-style: italic;
+}
+#container #mainContent #mainPanel .workSection p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  padding-top: 2rem;
+}
+#container #mainContent #mainPanel footer {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+@media only screen and (max-width: 1100px) {
+  #container #mainContent #mainPanel footer {
+    flex-direction: column;
+  }
+}
+#container #mainContent #mainPanel footer #contact,
+#container #mainContent #mainPanel footer #initials {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   height: 100%;
+  padding: 4rem 2rem;
+}
+@media only screen and (max-width: 1100px) {
+  #container #mainContent #mainPanel footer #contact,
+  #container #mainContent #mainPanel footer #initials {
+    width: 100%;
+  }
+}
+#container #mainContent #mainPanel footer #contact .contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1100px) {
+  #container #mainContent #mainPanel footer #contact .contactInfo {
+    flex-direction: column;
+  }
+}
+#container #mainContent #mainPanel footer .contactInfo p {
+  text-align: center;
+}
+#container #mainContent #mainPanel footer #contact {
+  background: #cac083;
+}
+#container #mainContent #mainPanel footer #initials {
+  background: #e7c077;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+#container #mainContent #mainPanel footer #initials h2 {
+  font-size: 10rem;
+}
+@media only screen and (max-width: 500px) {
+  #container #mainContent #mainPanel footer #initials h2 {
+    font-size: 6rem;
+  }
 }
