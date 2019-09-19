@@ -141,6 +141,25 @@ html, body {
 		background: @headerBGColor;
 		color: @headerFontColor;
 		padding: 4rem 0 2rem 0;
+		.flexColumn();
+
+		#mainNav {
+			font-size: 2rem;
+			margin-bottom: 2em;
+			text-align: right;
+			@media only screen and (max-width: @mobileWidth) {
+				text-align: center;
+			}
+
+			a {
+				text-decoration: none;
+				color: @headerFontColor;
+				padding: 2rem;
+				@media only screen and (max-width: @mobileWidth) {
+					padding: 1rem;
+				}
+			}
+		}
 	}
 
 	#mainContent {
@@ -247,6 +266,10 @@ html, body {
 				}
 				.contactInfo p {
 					text-align: center;
+				}
+				.contactInfo a {
+					text-decoration: none;
+					color: black;
 				}
 				#contact {
 					background: @contactBGColor;

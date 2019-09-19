@@ -204,6 +204,28 @@ body {
   background: #3a3a3a;
   color: wheat;
   padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+#container #mainHeader #mainNav {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  text-align: right;
+}
+@media only screen and (max-width: 500px) {
+  #container #mainHeader #mainNav {
+    text-align: center;
+  }
+}
+#container #mainHeader #mainNav a {
+  text-decoration: none;
+  color: wheat;
+  padding: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  #container #mainHeader #mainNav a {
+    padding: 1rem;
+  }
 }
 #container #mainContent {
   display: flex;
@@ -319,6 +341,10 @@ body {
 }
 #container #mainContent #mainPanel footer .contactInfo p {
   text-align: center;
+}
+#container #mainContent #mainPanel footer .contactInfo a {
+  text-decoration: none;
+  color: black;
 }
 #container #mainContent #mainPanel footer #contact {
   background: #cac083;
