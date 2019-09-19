@@ -362,3 +362,10 @@ body {
     font-size: 6rem;
   }
 }
+#container #copyrightBar {
+  display: block;
+  padding-top: 3em;
+  text-align: center;
+  background: #3a3a3a;
+  color: wheat;
+}
