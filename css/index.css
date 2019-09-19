@@ -227,6 +227,9 @@ body {
     padding: 1rem;
   }
 }
+#container #mainHeader #mainNav a:hover {
+  color: #bceeff;
+}
 #container #mainContent {
   display: flex;
   flex-direction: row;

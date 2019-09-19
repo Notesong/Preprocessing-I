@@ -63,9 +63,12 @@ html, body {
 @mobileWidth: 500px;
 @tabletWidth: 1100px;
 
+@navBGColor:  rgb(188, 238, 255);
 @asideBGColor: rgb(188, 238, 255);
 @headerBGColor: rgb(58, 58, 58);
 @headerFontColor: wheat;
+@copyrightBGColor: rgb(58, 58, 58);
+@copyrightFontColor: wheat;
 @mainPanelBGColor: rgb(231, 211, 175);
 @contactBGColor: rgb(202, 192, 131);
 @initialsBGColor: rgb(231, 192, 119);
@@ -73,6 +76,7 @@ html, body {
 @railwayFont: 'Raleway', sans-serif;
 @basicFont: Arial, Helvetica, sans-serif;
 @stylishBasicFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 
 // Mixins
 .flexColumn {
@@ -158,6 +162,9 @@ html, body {
 				@media only screen and (max-width: @mobileWidth) {
 					padding: 1rem;
 				}
+			}
+			a:hover {
+				color: @navBGColor;
 			}
 		}
 	}
@@ -295,8 +302,8 @@ html, body {
 		display: block;
 		padding-top: 3em;
 		text-align: center;
-		background: @headerBGColor;
-		color: @headerFontColor;
+		background: @copyrightBGColor;
+		color: @copyrightFontColor;
 	}
 
 } // end container
