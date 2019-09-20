@@ -114,6 +114,11 @@ html, body {
 		width: 100%;
 	}
 }
+.flexEnd {
+	display: flex;
+	justify-content: flex-end;
+}
+
 
 
 #container {
@@ -132,15 +137,6 @@ html, body {
 	}
 	p {
 		padding: 0 0 2rem 0;
-	}
-	li {
-		padding: 2rem 0;
-		width: 65%;
-		border-bottom: 0.1rem solid black;
-		text-align: center;
-	}
-	li:last-child {
-		border: none;
 	}
 	h1, h2 {
 		text-transform: uppercase;
@@ -212,26 +208,32 @@ html, body {
 				font-size: 1.8rem;
 				line-height: 2.6rem;
 			}
-
-			#asideHeader {
-				.flexColumn();
-				align-items: center;
-			}			
 			img {
 				.containImage();
 				padding: 2rem;
 				border-radius: 50%;
 				margin-bottom: 2rem;
 			}
+			#asideHeader {
+				.flexColumn();
+				align-items: center;
+			}			
 			#education {
 				p {
 					font-style: italic;
 				}
 			}
-			#techSkills ul {
-				.flexColumn;
-				align-items: center;
-				margin: 5rem 0;
+			#skills {
+				ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					padding: 2rem 0;
+				}
+				li {
+					font-weight: bold;
+					margin-bottom: 2rem;
+				}			
 			}
 			hr {
 				width: 15%;
