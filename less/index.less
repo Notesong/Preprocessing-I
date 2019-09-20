@@ -62,16 +62,28 @@ html, body {
 // Variables
 @mobileWidth: 500px;
 @tabletWidth: 1100px;
+@inbetween: 700px;
 
+// header
 @navBGColor:  rgb(188, 238, 255);
-@asideBGColor: rgb(188, 238, 255);
 @headerBGColor: rgb(58, 58, 58);
 @headerFontColor: wheat;
-@copyrightBGColor: rgb(58, 58, 58);
-@copyrightFontColor: wheat;
+
+// index page
+@asideBGColor: rgb(188, 238, 255);
 @mainPanelBGColor: rgb(231, 211, 175);
 @contactBGColor: rgb(202, 192, 131);
 @initialsBGColor: rgb(231, 192, 119);
+
+// portfolio
+@portfolioLaptopColor: rgb(58, 58, 58);
+@portfolioIconBGColor: rgb(231, 192, 119);
+@portfolioHeaderColor: rgb(231, 211, 175);
+@portfolioMainColor: rgb(188, 238, 255);
+
+// footer
+@copyrightBGColor: rgb(58, 58, 58);
+@copyrightFontColor: wheat;
 
 @railwayFont: 'Raleway', sans-serif;
 @stylishBasicFont: 'Lato:400', Arial, sans-serif;
@@ -92,10 +104,20 @@ html, body {
 		flex-direction: column;
 	}
 }
+.containImage {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+.tabletWidthHundred {
+	@media only screen and (max-width: @tabletWidth) {
+		width: 100%;
+	}
+}
 
 
 #container {
-
+	background: rgb(43, 43, 43);
 	.flexColumn();
 	padding: 2rem;
 	width: 100%;
@@ -196,9 +218,7 @@ html, body {
 				align-items: center;
 			}			
 			img {
-				width: 100%;
-				height: auto;
-				object-fit: contain;
+				.containImage();
 				padding: 2rem;
 				border-radius: 50%;
 				margin-bottom: 2rem;
@@ -270,9 +290,7 @@ html, body {
 					width: 50%;
 					height: 100%;
 					padding: 4rem 2rem;
-					@media only screen and (max-width: @tabletWidth) {
-						width: 100%;
-					}
+					.tabletWidthHundred();
 				}
 				#contact .contactInfo {
 					.flexWrap();
@@ -305,6 +323,61 @@ html, body {
 		} // end mainPanel
 
 	} // end mainContent
+
+	#portfolioMain {
+		background: @portfolioMainColor;
+
+		#portfolioHeader {
+			display: flex;
+			background:  @portfolioHeaderColor;
+
+			#porfolioText {
+				padding: 6rem;
+				width: 50%;
+				.tabletWidthHundred();
+				
+				p {
+					line-height: 2.6rem;
+				}
+			}
+			#porfolioMainImage {
+				background: @portfolioIconBGColor;
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@media only screen and (max-width: @tabletWidth) {
+					display: none;
+				}	
+				
+				i {
+					color: @portfolioLaptopColor;
+					font-size: 30rem;
+				}
+			}
+		}
+		#porfolioImages {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			padding: 5rem 0;
+
+			div {
+				width: 40%;
+				margin: 3rem;
+				@media only screen and (max-width: @inbetween) {
+					margin: 2rem;
+					width: 100%;
+				}
+			}
+
+			.portfolioImage {
+				.containImage();
+				border: 0.1rem solid black;
+
+			}
+		}
+	}
 
 	#copyrightBar {
 		display: block;

@@ -148,7 +148,18 @@ body {
     flex-direction: column;
   }
 }
+.containImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media only screen and (max-width: 1100px) {
+  .tabletWidthHundred {
+    width: 100%;
+  }
+}
 #container {
+  background: #2b2b2b;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -370,6 +381,63 @@ body {
   #container #mainContent #mainPanel footer #initials h2 {
     font-size: 6rem;
   }
+}
+#container #portfolioMain {
+  background: #bceeff;
+}
+#container #portfolioMain #portfolioHeader {
+  display: flex;
+  background: #e7d3af;
+}
+#container #portfolioMain #portfolioHeader #porfolioText {
+  padding: 6rem;
+  width: 50%;
+}
+@media only screen and (max-width: 1100px) {
+  #container #portfolioMain #portfolioHeader #porfolioText {
+    width: 100%;
+  }
+}
+#container #portfolioMain #portfolioHeader #porfolioText p {
+  line-height: 2.6rem;
+}
+#container #portfolioMain #portfolioHeader #porfolioMainImage {
+  background: #e7c077;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1100px) {
+  #container #portfolioMain #portfolioHeader #porfolioMainImage {
+    display: none;
+  }
+}
+#container #portfolioMain #portfolioHeader #porfolioMainImage i {
+  color: #3a3a3a;
+  font-size: 30rem;
+}
+#container #portfolioMain #porfolioImages {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 5rem 0;
+}
+#container #portfolioMain #porfolioImages div {
+  width: 40%;
+  margin: 3rem;
+}
+@media only screen and (max-width: 700px) {
+  #container #portfolioMain #porfolioImages div {
+    margin: 2rem;
+    width: 100%;
+  }
+}
+#container #portfolioMain #porfolioImages .portfolioImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 0.1rem solid black;
 }
 #container #copyrightBar {
   display: block;
