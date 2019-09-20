@@ -133,7 +133,7 @@ table {
 html,
 body {
   font-size: 62.5%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Lato:400', Arial, sans-serif;
 }
 .flexColumn {
   display: flex;
@@ -246,6 +246,11 @@ body {
 #container #mainContent #asidePanel {
   background: #bceeff;
 }
+#container #mainContent #asidePanel p {
+  font-family: 'Lato:300', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
 #container #mainContent #asidePanel #asideHeader {
   display: flex;
   flex-direction: column;
@@ -271,10 +276,10 @@ body {
 #container #mainContent #asidePanel hr {
   width: 15%;
   height: 0.7rem;
-  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
   background: black;
   border-radius: 10px;
-  margin-bottom: 2rem;
 }
 #container #mainContent #asidePanel h2 {
   margin-top: 2rem;
@@ -303,9 +308,10 @@ body {
   font-style: italic;
 }
 #container #mainContent #mainPanel .workSection p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato:400', Arial, sans-serif;
   font-size: 1.6rem;
   padding-top: 2rem;
+  line-height: 2.6rem;
 }
 #container #mainContent #mainPanel footer {
   display: flex;
