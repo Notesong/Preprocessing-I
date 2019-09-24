@@ -60,10 +60,13 @@ html, body {
 
 
 // Variables
+
+// screen widths
 @mobileWidth: 500px;
 @tabletWidth: 1100px;
 @inbetween: 700px;
 
+// colors
 // header
 @navBGColor:  rgb(188, 238, 255);
 @headerBGColor: rgb(58, 58, 58);
@@ -85,12 +88,14 @@ html, body {
 @copyrightBGColor: rgb(58, 58, 58);
 @copyrightFontColor: wheat;
 
+// fonts
 @railwayFont: 'Raleway', sans-serif;
 @stylishBasicFont: 'Lato:400', Arial, sans-serif;
 @thinBasicFont: 'Lato:300', 'Arial Narrow', Arial, sans-serif;
 
 
 // Mixins
+
 .flexColumn {
 	display: flex;
 	flex-direction: column;
@@ -104,22 +109,56 @@ html, body {
 		flex-direction: column;
 	}
 }
-.containImage {
-	width: 100%;
-	height: auto;
-	object-fit: contain;
-}
 .tabletWidthHundred {
 	@media only screen and (max-width: @tabletWidth) {
 		width: 100%;
 	}
 }
+.containImage {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
 .flexEnd {
 	display: flex;
 	justify-content: flex-end;
 }
 
 
+// Basic font setup
+
+p, li {
+	font-size: 1.6rem;
+}
+p {
+	padding: 0 0 2rem 0;
+}
+h1, h2 {
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+h1 {
+	font-size: 5rem;
+	letter-spacing: 1rem;
+	font-family: @railwayFont;
+	@media only screen and (max-width: @mobileWidth) {
+		font-size: 3rem;
+	}
+}	
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 1.7rem;
+}
+
+
+// General CSS
 
 #container {
 	background: rgb(43, 43, 43);
@@ -128,37 +167,6 @@ html, body {
 	width: 100%;
 	@media only screen and (max-width: @mobileWidth) {
 		padding: 0;
-	}
-
-	// Basic font setup
-
-	p, li {
-		font-size: 1.6rem;
-	}
-	p {
-		padding: 0 0 2rem 0;
-	}
-	h1, h2 {
-		text-transform: uppercase;
-		text-align: center;
-		padding-bottom: 2rem;
-	}
-	h1 {
-		font-size: 5rem;
-		letter-spacing: 1rem;
-		font-family: @railwayFont;
-		@media only screen and (max-width: @mobileWidth) {
-			font-size: 3rem;
-		}
-	}	
-	h2 {
-		font-size: 2rem;
-	}
-	h3 {
-		font-size: 1.8rem;
-	}
-	h4 {
-		font-size: 1.7rem;
 	}
 
 	#mainHeader {
@@ -294,30 +302,33 @@ html, body {
 					padding: 4rem 2rem;
 					.tabletWidthHundred();
 				}
-				#contact .contactInfo {
-					.flexWrap();
-					justify-content: space-between;
-					.tabletColumn();
-				}
-				.contactInfo p {
-					text-align: center;
-				}
-				.contactInfo a {
-					text-decoration: none;
-					color: black;
-				}
 				#contact {
-					background: @contactBGColor;					
+					background: @contactBGColor;
+					.contactInfo {
+						.flexWrap();
+						justify-content: space-between;
+						.tabletColumn();
+						
+						p {
+							text-align: center;
+						}
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}				
 				}
 				#initials {
 					background: @initialsBGColor;
 					justify-content: center;
 					font-family: @railwayFont;
 				}
-				#initials h2 {
-					font-size: 10rem;
-					@media only screen and (max-width: @mobileWidth) {
-						font-size: 6rem;
+				#initials {
+					 h2 {
+						font-size: 10rem;
+						@media only screen and (max-width: @mobileWidth) {
+							font-size: 6rem;
+						}
 					}
 				}
 			} // end footer

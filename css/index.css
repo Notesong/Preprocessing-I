@@ -148,19 +148,51 @@ body {
     flex-direction: column;
   }
 }
-.containImage {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
 @media only screen and (max-width: 1100px) {
   .tabletWidthHundred {
     width: 100%;
   }
 }
+.containImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 .flexEnd {
   display: flex;
   justify-content: flex-end;
+}
+p,
+li {
+  font-size: 1.6rem;
+}
+p {
+  padding: 0 0 2rem 0;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+h1 {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.7rem;
 }
 #container {
   background: #2b2b2b;
@@ -173,38 +205,6 @@ body {
   #container {
     padding: 0;
   }
-}
-#container p,
-#container li {
-  font-size: 1.6rem;
-}
-#container p {
-  padding: 0 0 2rem 0;
-}
-#container h1,
-#container h2 {
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-#container h1 {
-  font-size: 5rem;
-  letter-spacing: 1rem;
-  font-family: 'Raleway', sans-serif;
-}
-@media only screen and (max-width: 500px) {
-  #container h1 {
-    font-size: 3rem;
-  }
-}
-#container h2 {
-  font-size: 2rem;
-}
-#container h3 {
-  font-size: 1.8rem;
-}
-#container h4 {
-  font-size: 1.7rem;
 }
 #container #mainHeader {
   background: #3a3a3a;
@@ -348,6 +348,9 @@ body {
     width: 100%;
   }
 }
+#container #mainContent #mainPanel footer #contact {
+  background: #cac083;
+}
 #container #mainContent #mainPanel footer #contact .contactInfo {
   display: flex;
   flex-wrap: wrap;
@@ -358,15 +361,12 @@ body {
     flex-direction: column;
   }
 }
-#container #mainContent #mainPanel footer .contactInfo p {
+#container #mainContent #mainPanel footer #contact .contactInfo p {
   text-align: center;
 }
-#container #mainContent #mainPanel footer .contactInfo a {
+#container #mainContent #mainPanel footer #contact .contactInfo a {
   text-decoration: none;
   color: black;
-}
-#container #mainContent #mainPanel footer #contact {
-  background: #cac083;
 }
 #container #mainContent #mainPanel footer #initials {
   background: #e7c077;
